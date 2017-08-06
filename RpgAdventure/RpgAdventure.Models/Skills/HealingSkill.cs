@@ -11,7 +11,7 @@ namespace RpgAdventure.Models.Skills
     {
         private int healingDealt;
 
-        public HealingSkill(int manaCost, int levelRequired, int healingDelt) : base(manaCost, levelRequired)
+        public HealingSkill(int manaCost, int levelRequired, int healingDealt) : base(manaCost, levelRequired)
         {
             this.HealingDealt = healingDealt;
         }
@@ -23,7 +23,7 @@ namespace RpgAdventure.Models.Skills
             {
                 if (value < 0)
                 {
-                    throw new ArgumentException(string.Join(Constants.ErrorMessages.NumericValueCannotBeNegative, "Healing Dealt"));
+                    throw new ArgumentException(string.Join(Constants.ErrorMessages.NumericValueCannotBeNegativeException, "Healing Dealt"));
                 }
                 this.healingDealt = value;
             }

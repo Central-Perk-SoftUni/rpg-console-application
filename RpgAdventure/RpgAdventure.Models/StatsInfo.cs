@@ -27,7 +27,7 @@ namespace RpgAdventure.Models
             {
                 if (value < 0)
                 {
-                    throw new ArgumentException(string.Format(Constants.ErrorMessages.NumericValueCannotBeNegative,"Stamina"));
+                    throw new ArgumentException(string.Format(Constants.ErrorMessages.NumericValueCannotBeNegativeException,"Stamina"));
                 }
                 this.stamina = value;
             }
@@ -40,7 +40,7 @@ namespace RpgAdventure.Models
             {
                 if (value < 0)
                 {
-                    throw new ArgumentException(string.Format(Constants.ErrorMessages.NumericValueCannotBeNegative, "Intellect"));
+                    throw new ArgumentException(string.Format(Constants.ErrorMessages.NumericValueCannotBeNegativeException, "Intellect"));
                 }
                 this.intellect = value;
             }
@@ -53,7 +53,7 @@ namespace RpgAdventure.Models
             {
                 if (value < 0)
                 {
-                    throw new ArgumentException(string.Format(Constants.ErrorMessages.NumericValueCannotBeNegative, "Agility"));
+                    throw new ArgumentException(string.Format(Constants.ErrorMessages.NumericValueCannotBeNegativeException, "Agility"));
                 }
                 this.agility = value;
             }
@@ -66,7 +66,7 @@ namespace RpgAdventure.Models
             {
                 if (value < 0)
                 {
-                    throw new ArgumentException(string.Format(Constants.ErrorMessages.NumericValueCannotBeNegative, "Strength"));
+                    throw new ArgumentException(string.Format(Constants.ErrorMessages.NumericValueCannotBeNegativeException, "Strength"));
                 }
                 this.strength = value;
             }

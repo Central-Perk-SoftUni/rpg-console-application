@@ -6,11 +6,13 @@ namespace RpgAdventure.Models.Skills
 {
     public class DamagingSkill : Skill
     {
+        public const string CannotDamageFriendlyException = "Damaging abilities cannot be cast on friendly targets";
+
         private int damageDealt;
 
         public DamagingSkill(int manaCost, int levelRequired, int damageDealt) : base(manaCost, levelRequired)
         {
-
+            this.DamageDealt = damageDealt;
         }
 
         public int DamageDealt
@@ -20,7 +22,7 @@ namespace RpgAdventure.Models.Skills
             {
                 if (value < 0)
                 {
-                    throw new ArgumentException(string.Join(Constants.ErrorMessages.NumericValueCannotBeNegative, "Damadge dealt"));
+                    throw new ArgumentException(string.Join(Constants.ErrorMessages.NumericValueCannotBeNegativeException, "Damage dealt"));
                 }
                 this.damageDealt = value;
             }
@@ -30,9 +32,9 @@ namespace RpgAdventure.Models.Skills
         {
             if (typeof(T) != typeof(IEnemy))
             {
-                throw new ArgumentException(Constants.ErrorMessages.CannotDamageFriendly);
+                throw new ArgumentException(CannotDamageFriendlyException);
             }
-            Cast((IEnemy)target);
+            this.Cast((IEnemy)target);
         }
 
         private void Cast(IEnemy target)

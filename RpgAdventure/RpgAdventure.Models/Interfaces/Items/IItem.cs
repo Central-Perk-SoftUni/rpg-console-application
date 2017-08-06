@@ -1,7 +1,7 @@
 ﻿using RpgAdventure.Models.Enums;
 using System;
 
-namespace RpgAdventure.Models.Interfaces
+namespace RpgAdventure.Models.Interfaces.Items
 {
     public interface IItem
     {

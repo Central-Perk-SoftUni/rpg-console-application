@@ -2,8 +2,8 @@
 {
     public interface ILevelInfo
     {
-        int Current { get; }
-        int Experience { get; }
-        int TotalExperienceRequired { get; }
+        int CurrentLevel { get; }
+        int CurrentExperience { get; }
+        int TotalExperienceRequiredToNextLevel { get; }
     }
 }

@@ -2,27 +2,30 @@
 using RpgAdventure.Utilities;
 using System;
 using System.Collections.Generic;
+using RpgAdventure.Models.Interfaces.Items;
 
 namespace RpgAdventure.Models
 {
     class Inventory : IInventory
     {
-        private int capacity;
-        private List<IItem> items;
+        public const string ItemCannotBeNull = "Item can not be null!";
 
-        public Inventory()
+        private int capacity;
+        private readonly ICollection<IItem> items;
+
+        public Inventory(ICollection<IItem> items, int capacity)
         {
-            this.items = new List<IItem>();
-            this.capacity = 30;
+            this.items = items;
+            this.capacity = capacity;
         }
 
-        public ICollection<IItem> Items => this.items.AsReadOnly();
+        public ICollection<IItem> Items => this.items;
         
         public bool Add(IItem item)
         {
             if (item == null)
             {
-                throw new ArgumentException(Constants.ErrorMessages.ItemCannotBeNull);
+                throw new ArgumentException(ItemCannotBeNull);
             }
             if (this.items.Count == capacity)
             {
@@ -36,7 +39,7 @@ namespace RpgAdventure.Models
         {
             if (item == null)
             {
-                throw new ArgumentException(Constants.ErrorMessages.ItemCannotBeNull);
+                throw new ArgumentException(ItemCannotBeNull);
             }
             if (!this.items.Contains(item))
             {
