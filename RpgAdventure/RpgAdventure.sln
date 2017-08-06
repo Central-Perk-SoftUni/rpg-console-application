@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RpgAdventure.Core", "RpgAdventure.Core\RpgAdventure.Core.csproj", "{2384DB38-446B-4D76-9906-E13C96618E17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RpgAdventure.Models", "RpgAdventure.Models\RpgAdventure.Models.csproj", "{7FA8B16D-8FC7-4883-8206-33ACE4A21791}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RpgAdventure.Services", "RpgAdventure.Services\RpgAdventure.Services.csproj", "{B45C178B-D0C2-4591-A481-4F89B06F5A8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RpgAdventure.Utilities", "RpgAdventure.Utilities\RpgAdventure.Utilities.csproj", "{CBB9E64B-94F9-4E19-9D81-2095A881029A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2384DB38-446B-4D76-9906-E13C96618E17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2384DB38-446B-4D76-9906-E13C96618E17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2384DB38-446B-4D76-9906-E13C96618E17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2384DB38-446B-4D76-9906-E13C96618E17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FA8B16D-8FC7-4883-8206-33ACE4A21791}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FA8B16D-8FC7-4883-8206-33ACE4A21791}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FA8B16D-8FC7-4883-8206-33ACE4A21791}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FA8B16D-8FC7-4883-8206-33ACE4A21791}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B45C178B-D0C2-4591-A481-4F89B06F5A8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B45C178B-D0C2-4591-A481-4F89B06F5A8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B45C178B-D0C2-4591-A481-4F89B06F5A8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B45C178B-D0C2-4591-A481-4F89B06F5A8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBB9E64B-94F9-4E19-9D81-2095A881029A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBB9E64B-94F9-4E19-9D81-2095A881029A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBB9E64B-94F9-4E19-9D81-2095A881029A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBB9E64B-94F9-4E19-9D81-2095A881029A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
