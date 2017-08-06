@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RpgAdventure.Utilities
+﻿namespace RpgAdventure.Utilities
 {
     public class Constants
     {
@@ -14,6 +8,7 @@ namespace RpgAdventure.Utilities
             public const string LevelMustBeBetweenOneAndSixty = "Level must be between 1 and 60!";
             public const string TotalExperienceCannotBeLessThanCurrentExperience = "Total Experience can not be less than current experience!";
             public const string ItemCannotBeNull = "Item can not be null!";
+            public const string CannotDamageFriendly = "Damaging abilities cannot be cast on friendly targets";
         }
     }
 }
