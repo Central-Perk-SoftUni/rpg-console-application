@@ -40,19 +40,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enemy.cs" />
     <Compile Include="Enums\ArmorMaterial.cs" />
     <Compile Include="Enums\ArmorType.cs" />
     <Compile Include="Enums\ItemRarity.cs" />
     <Compile Include="Enums\WeaponType.cs" />
     <Compile Include="Gear.cs" />
     <Compile Include="Interfaces\IGear.cs" />
+    <Compile Include="Interfaces\IInventory.cs" />
     <Compile Include="Interfaces\IItem.cs" />
     <Compile Include="Interfaces\ILevelInfo.cs" />
+    <Compile Include="Interfaces\IEnemy.cs" />
     <Compile Include="Interfaces\IStatsInfo.cs" />
     <Compile Include="Interfaces\Items\IArmor.cs" />
     <Compile Include="Interfaces\Items\IWeapon.cs" />
+    <Compile Include="Inventory.cs" />
     <Compile Include="Items\Armor.cs" />
     <Compile Include="Items\Weapon.cs" />
+    <Compile Include="Level.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StatsInfo.cs" />
   </ItemGroup>

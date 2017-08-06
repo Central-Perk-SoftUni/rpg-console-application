@@ -1,4 +1,5 @@
 ﻿using RpgAdventure.Models.Enums;
+using System;
 
 namespace RpgAdventure.Models.Interfaces
 {
