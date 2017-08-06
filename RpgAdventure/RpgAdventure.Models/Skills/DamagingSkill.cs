@@ -10,7 +10,7 @@ namespace RpgAdventure.Models.Skills
 
         private int damageDealt;
 
-        public DamagingSkill(int manaCost, int levelRequired, int damageDealt) : base(manaCost, levelRequired)
+        public DamagingSkill(string name, int manaCost, int levelRequired, int damageDealt) : base(name, manaCost, levelRequired)
         {
             this.DamageDealt = damageDealt;
         }

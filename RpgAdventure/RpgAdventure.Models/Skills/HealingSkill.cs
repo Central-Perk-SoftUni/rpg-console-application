@@ -11,7 +11,7 @@ namespace RpgAdventure.Models.Skills
     {
         private int healingDealt;
 
-        public HealingSkill(int manaCost, int levelRequired, int healingDealt) : base(manaCost, levelRequired)
+        public HealingSkill(string name, int manaCost, int levelRequired, int healingDealt) : base(name, manaCost, levelRequired)
         {
             this.HealingDealt = healingDealt;
         }

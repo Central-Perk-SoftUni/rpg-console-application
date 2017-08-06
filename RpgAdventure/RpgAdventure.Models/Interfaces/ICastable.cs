@@ -1,7 +1,8 @@
 ﻿namespace RpgAdventure.Models.Interfaces
 {
-    interface ICastable
+    public interface ICastable
     {
+        string Name { get; }
         void TryCast<T>(T target);
     }
 }

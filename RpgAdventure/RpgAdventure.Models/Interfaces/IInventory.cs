@@ -7,7 +7,7 @@ using RpgAdventure.Models.Interfaces.Items;
 
 namespace RpgAdventure.Models.Interfaces
 {
-    interface IInventory
+    public interface IInventory
     {
         ICollection<IItem> Items { get; }
     }

@@ -40,12 +40,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class.cs" />
+    <Compile Include="Classes\Base\Warrior.cs" />
+    <Compile Include="Classes\Base\Hunter.cs" />
+    <Compile Include="Classes\Sub\ArcaneMage.cs" />
+    <Compile Include="Classes\Sub\FireMage.cs" />
+    <Compile Include="Classes\Sub\FrostMage.cs" />
+    <Compile Include="Classes\Base\Mage.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="Enums\ArmorMaterial.cs" />
     <Compile Include="Enums\ArmorType.cs" />
     <Compile Include="Enums\ItemRarity.cs" />
     <Compile Include="Enums\WeaponType.cs" />
     <Compile Include="Gear.cs" />
+    <Compile Include="Interfaces\IClass.cs" />
     <Compile Include="Interfaces\IGear.cs" />
     <Compile Include="Interfaces\IInventory.cs" />
     <Compile Include="Interfaces\Items\IItem.cs" />
