@@ -7,11 +7,13 @@ namespace RpgAdventure.Models.Skills
 
     public abstract class Skill : ICastable
     {
+        private const string SkillNameCannotBeNullOrWhitespace = "Skill name can not be null or whitespace!";
+
         private string name;
         protected int manaCost;
         protected int levelRequired;
 
-        public Skill(string name, int manaCost, int levelRequired)
+        protected Skill(string name, int manaCost, int levelRequired)
         {
             this.Name = name;
             this.manaCost = manaCost;
@@ -25,7 +27,7 @@ namespace RpgAdventure.Models.Skills
             {
                 if (string.IsNullOrWhiteSpace(value))
                 {
-                    throw new ArgumentNullException(Constants.ErrorMessages.SkillNameCannotBeNullOrWhitespace);
+                    throw new ArgumentNullException(SkillNameCannotBeNullOrWhitespace);
                 }
                 this.name = value;
             }
