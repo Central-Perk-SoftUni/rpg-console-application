@@ -12,13 +12,13 @@ namespace RpgAdventure.Models
     {
         private string name;
 
-        public Player(IPlayableClass playerClass, IRace race, string name, IInventory inventory, IStatsInfo stats, IGear equippedItems, ILevelInfo levelInfo)
+        public Player(IPlayableClass playerClass, IRace race, string name, IInventory inventory, IHealthInfo healthInfo, IGear equippedItems, ILevelInfo levelInfo)
         {
             this.Class = playerClass;
             this.Race = race;
             this.Name = name;
             this.Inventory = inventory;
-            this.Stats = stats;
+            this.HealthInfo = healthInfo;
             this.EquippedItems = equippedItems;
             this.LevelInfo = levelInfo;
         }
@@ -39,7 +39,7 @@ namespace RpgAdventure.Models
         }
 
         public IInventory Inventory { get; set; }
-        public IStatsInfo Stats { get; set; }
+        public IHealthInfo HealthInfo { get; set; }
         public IGear EquippedItems { get; set; }
         public ILevelInfo LevelInfo { get; set; }
     }

@@ -2,7 +2,7 @@
 using RpgAdventure.Models.Interfaces;
 using RpgAdventure.Models.Skills;
 
-namespace RpgAdventure.Models.PlayableClasses.Classes.MageSpecialisations
+namespace RpgAdventure.Models.PlayableClasses.Classes.Specialisations
 {
     public class ArcaneMage : Mage
     {

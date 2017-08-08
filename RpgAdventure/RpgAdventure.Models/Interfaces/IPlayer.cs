@@ -12,7 +12,7 @@ namespace RpgAdventure.Models.Interfaces
         IRace Race { get; set; }
         string Name { get; set; }
         IInventory Inventory { get; set; }
-        IStatsInfo Stats { get; set; }
+        IHealthInfo HealthInfo { get; set; }
         IGear EquippedItems { get; set; }
         ILevelInfo LevelInfo { get; set; }
     }

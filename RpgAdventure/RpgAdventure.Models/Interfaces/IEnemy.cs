@@ -9,7 +9,8 @@ namespace RpgAdventure.Models.Interfaces
     public interface IEnemy
     {
         string Name { get; }
-        IStatsInfo Stats { get; }
+        IHealthInfo HealthInfo { get; }
+        int AttackDamage { get; set; }
         int Level { get; }
     }
 }
