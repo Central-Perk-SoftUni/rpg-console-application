@@ -44,8 +44,18 @@
     <Compile Include="Interfaces\IO\IWriter.cs" />
     <Compile Include="IO\ConsoleReader.cs" />
     <Compile Include="IO\ConsoleWriter.cs" />
+    <Compile Include="MenuService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\RpgAdventure.Models\RpgAdventure.Models.csproj">
+      <Project>{7FA8B16D-8FC7-4883-8206-33ACE4A21791}</Project>
+      <Name>RpgAdventure.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RpgAdventure.Utilities\RpgAdventure.Utilities.csproj">
+      <Project>{CBB9E64B-94F9-4E19-9D81-2095A881029A}</Project>
+      <Name>RpgAdventure.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

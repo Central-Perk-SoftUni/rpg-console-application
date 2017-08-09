@@ -42,13 +42,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandParser.cs" />
+    <Compile Include="Commands\ExitCommand.cs" />
+    <Compile Include="Commands\NewGameCommand.cs" />
+    <Compile Include="Commands\ShowCreditsCommand.cs" />
     <Compile Include="Engine.cs" />
+    <Compile Include="Interfaces\ICommand.cs" />
+    <Compile Include="Interfaces\ICommandParser.cs" />
     <Compile Include="Interfaces\IEngine.cs" />
     <Compile Include="StartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RpgAdventure.Models\RpgAdventure.Models.csproj">
+      <Project>{7FA8B16D-8FC7-4883-8206-33ACE4A21791}</Project>
+      <Name>RpgAdventure.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RpgAdventure.Services\RpgAdventure.Services.csproj">
+      <Project>{B45C178B-D0C2-4591-A481-4F89B06F5A8D}</Project>
+      <Name>RpgAdventure.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
