@@ -1,4 +1,9 @@
-﻿namespace RpgAdventure.Core
+﻿using System;
+using RpgAdventure.Core.Factories;
+using RpgAdventure.Services.Interfaces;
+using RpgAdventure.Utilities.Interfaces;
+
+namespace RpgAdventure.Core
 {
     using RpgAdventure.Core.Commands;
     using RpgAdventure.Core.Interfaces;
@@ -6,31 +11,18 @@
 
     public class CommandParser : ICommandParser
     {
-        private readonly MenuService menuService;
+        private readonly IMenuService menuService;
 
-        public CommandParser()
+        public CommandParser(IMenuService menuService)
         {
-            this.menuService = new MenuService();
+            this.menuService = menuService;
         }
 
-        public void ParseCommand(int action)
+        public void ParseCommand(string commandName)
         {
-            switch (action)
-            {
-                case 1:
-                    // NewGameCommand TO DO...
-                    break;
-
-                case 2:
-                    ICommand showCreditsCommand = new ShowCreditsCommand(this.menuService);
-                    showCreditsCommand.Execute();
-                    break;
-
-                case 3:
-                    ICommand exitCommand = new ExitCommand();
-                    exitCommand.Execute();
-                    break;
-            }
+            IFactory<ICommand> commandFactory = new CommandFactory();
+            ICommand command = commandFactory.Create(commandName);
+            command.Execute();
         }
     }
 }

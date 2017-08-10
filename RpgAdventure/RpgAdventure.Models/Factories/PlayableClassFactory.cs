@@ -4,15 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RpgAdventure.Models.Interfaces;
-using RpgAdventure.Models.Interfaces.Factories;
+using RpgAdventure.Utilities.Interfaces;
 
 namespace RpgAdventure.Models.Factories
 {
-    public class PlayableClassFactory : IPlayableClassFactory
+    
+    public class PlayableClassFactory : IFactory<IPlayableClass>
     {
+        private const string PlayableClassesNamespace = "RpgAdventure.Models.PlayableClasses.Classes.Specialisations";
+
         public IPlayableClass Create(string className)
         {
-            Type classType = Type.GetType($"RpgAdventure.Models.PlayableClasses.Classes.Specialisations.{className}");
+            Type classType = Type.GetType($"{PlayableClassesNamespace}.{className}");
             IPlayableClass classInstance = (IPlayableClass)Activator.CreateInstance(classType);
             return classInstance;
 

@@ -1,17 +1,20 @@
-﻿namespace RpgAdventure.Services
+﻿using RpgAdventure.Services.Interfaces;
+using RpgAdventure.Services.Interfaces.IO;
+
+namespace RpgAdventure.Services
 {
     using System;
     using System.ComponentModel;
     using RpgAdventure.Models.Interfaces;
     using RpgAdventure.Services.IO;
 
-    public class MenuService
+    public class MenuService : IMenuService
     {
-        private ConsoleWriter writer;
+        private IWriter writer;
 
-        public MenuService()
+        public MenuService(IWriter writer)
         {
-            this.writer = new ConsoleWriter();
+            this.writer = writer;
         }
 
         public void ShowMenuItems(IMenu menu)

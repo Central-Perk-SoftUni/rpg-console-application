@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Linq;
 using RpgAdventure.Core.Interfaces;
+using RpgAdventure.Models.Enums;
+using RpgAdventure.Services.Interfaces;
 
 namespace RpgAdventure.Core
 {
@@ -10,12 +13,12 @@ namespace RpgAdventure.Core
     public class Engine : IEngine
     {
         private readonly ICommandParser commandParser;
-        private readonly MenuService menuService;
+        private readonly IMenuService menuService;
 
-        public Engine()
+        public Engine(ICommandParser commandParser, IMenuService menuService)
         {
-            this.commandParser = new CommandParser();
-            this.menuService = new MenuService();
+            this.commandParser = commandParser;
+            this.menuService = menuService;
         }
 
         public void Run()
@@ -41,7 +44,8 @@ namespace RpgAdventure.Core
                 }
                 else if (pressedKey.Key == ConsoleKey.Enter)
                 {
-                    this.commandParser.ParseCommand(menu.CurrentCursorPosition);
+                    MenuItem currentMenuOption = menu.MenuItems.ElementAt(menu.CurrentCursorPosition - 1);
+                    this.commandParser.ParseCommand(Enum.GetName(typeof(MenuItem),currentMenuOption));
                 }
                 Console.Clear();
                 this.menuService.ShowMenuItems(menu);

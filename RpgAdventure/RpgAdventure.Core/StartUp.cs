@@ -1,4 +1,8 @@
 ﻿using RpgAdventure.Core.Interfaces;
+using RpgAdventure.Services;
+using RpgAdventure.Services.Interfaces;
+using RpgAdventure.Services.Interfaces.IO;
+using RpgAdventure.Services.IO;
 
 namespace RpgAdventure.Core
 {
@@ -6,7 +10,10 @@ namespace RpgAdventure.Core
     {
         static void Main(string[] args)
         {
-            IEngine engine = new Engine();
+            IWriter writer = new ConsoleWriter();
+            IMenuService menuService = new MenuService(writer);
+            ICommandParser commandParser = new CommandParser(menuService);
+            IEngine engine = new Engine(commandParser,menuService);
             engine.Run();
         }
     }

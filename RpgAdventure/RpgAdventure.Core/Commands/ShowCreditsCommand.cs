@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RpgAdventure.Services.Interfaces;
 
 namespace RpgAdventure.Core.Commands
 {
@@ -11,9 +12,9 @@ namespace RpgAdventure.Core.Commands
 
     public class ShowCreditsCommand : ICommand
     {
-        private readonly MenuService menuService;
+        private readonly IMenuService menuService;
 
-        public ShowCreditsCommand(MenuService menuService)
+        public ShowCreditsCommand(IMenuService menuService)
         {
             this.menuService = menuService;
         }

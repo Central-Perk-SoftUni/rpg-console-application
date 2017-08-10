@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IMenuService.cs" />
     <Compile Include="Interfaces\IO\IReader.cs" />
     <Compile Include="Interfaces\IO\IWriter.cs" />
     <Compile Include="IO\ConsoleReader.cs" />

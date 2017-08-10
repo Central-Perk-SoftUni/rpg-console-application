@@ -47,6 +47,7 @@
     <Compile Include="Commands\NewGameCommand.cs" />
     <Compile Include="Commands\ShowCreditsCommand.cs" />
     <Compile Include="Engine.cs" />
+    <Compile Include="Factories\CommandFactory.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
     <Compile Include="Interfaces\ICommandParser.cs" />
     <Compile Include="Interfaces\IEngine.cs" />
@@ -65,6 +66,11 @@
       <Project>{B45C178B-D0C2-4591-A481-4F89B06F5A8D}</Project>
       <Name>RpgAdventure.Services</Name>
     </ProjectReference>
+    <ProjectReference Include="..\RpgAdventure.Utilities\RpgAdventure.Utilities.csproj">
+      <Project>{CBB9E64B-94F9-4E19-9D81-2095A881029A}</Project>
+      <Name>RpgAdventure.Utilities</Name>
+    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

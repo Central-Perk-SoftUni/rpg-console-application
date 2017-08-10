@@ -8,6 +8,6 @@ namespace RpgAdventure.Core.Interfaces
 {
     public interface ICommandParser
     {
-        void ParseCommand(int action);
+        void ParseCommand(string commandName);
     }
 }
