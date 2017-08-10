@@ -1,15 +1,15 @@
-﻿using System.Collections.Generic;
-using RpgAdventure.Models.Interfaces;
-using RpgAdventure.Models.Skills;
-
-namespace RpgAdventure.Models.PlayableClasses.Classes.MageSpecialisations
+﻿namespace RpgAdventure.Models.PlayableClasses.Classes.Specialisations
 {
-    public class FireMage : Mage
+    using System.Collections.Generic;
+    using Interfaces;
+    using Skills;
+
+    public class FireMage : Classes.Mage
     {
         private static readonly ICollection<ICastable> specialisationSkills = new List<ICastable>()
         {
-            new OffensiveSkill("Pyroblast", 1, 1, 1),
-            new OffensiveSkill("Combustion", 1, 1, 1)
+            new OffensiveSkill("Fireball", 1, 1, 1),
+            new OffensiveSkill("Fire Blast", 1, 1, 1)
         };
 
 
@@ -18,7 +18,7 @@ namespace RpgAdventure.Models.PlayableClasses.Classes.MageSpecialisations
 
         }
 
-        public FireMage(ICollection<ICastable> specialisationSkills) :base()
+        public FireMage(ICollection<ICastable> specialisationSkills)
         {
             foreach (var specialisationSkll in specialisationSkills)
             {

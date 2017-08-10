@@ -47,6 +47,12 @@
     <Compile Include="Interfaces\IMenu.cs" />
     <Compile Include="Interfaces\IPlayer.cs" />
     <Compile Include="Menu.cs" />
+    <Compile Include="PlayableClasses\Classes\Specialisations\BeastMaster.cs" />
+    <Compile Include="PlayableClasses\Classes\Specialisations\Marksmanship.cs" />
+    <Compile Include="PlayableClasses\Classes\Specialisations\Survival.cs" />
+    <Compile Include="PlayableClasses\Classes\Specialisations\Arms.cs" />
+    <Compile Include="PlayableClasses\Classes\Specialisations\Fury.cs" />
+    <Compile Include="PlayableClasses\Classes\Specialisations\Protection.cs" />
     <Compile Include="PlayableClasses\PlayableClass.cs" />
     <Compile Include="PlayableClasses\Classes\Warrior.cs" />
     <Compile Include="PlayableClasses\Classes\Hunter.cs" />

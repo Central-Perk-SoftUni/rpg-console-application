@@ -4,21 +4,20 @@
     using Interfaces;
     using Skills;
 
-    public class ArcaneMage : Classes.Mage
-
+    public class BeastMaster : Classes.Hunter
     {
         private static readonly ICollection<ICastable> specialisationSkills = new List<ICastable>()
-    {
-        new OffensiveSkill("Arcane blast", 1, 1, 1),
-        new OffensiveSkill("Arcane Barrage", 1, 1, 1)
-    };
+        {
+            new OffensiveSkill("Multi-Shot", 1, 1, 1),
+            new OffensiveSkill("Concussive Shot", 1, 1, 1)
+        };
 
-        public ArcaneMage() : this(specialisationSkills)
+        public BeastMaster() : this(specialisationSkills)
         {
 
         }
 
-        public ArcaneMage(ICollection<ICastable> specialisationSkills)
+        public BeastMaster(ICollection<ICastable> specialisationSkills)
         {
             foreach (var specialisationSkll in specialisationSkills)
             {

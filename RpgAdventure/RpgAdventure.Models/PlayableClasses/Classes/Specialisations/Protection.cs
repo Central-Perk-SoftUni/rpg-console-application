@@ -1,24 +1,24 @@
 ﻿namespace RpgAdventure.Models.PlayableClasses.Classes.Specialisations
 {
     using System.Collections.Generic;
+    using Classes;
     using Interfaces;
     using Skills;
 
-    public class ArcaneMage : Classes.Mage
-
+    public class Protection : Warrior
     {
         private static readonly ICollection<ICastable> specialisationSkills = new List<ICastable>()
-    {
-        new OffensiveSkill("Arcane blast", 1, 1, 1),
-        new OffensiveSkill("Arcane Barrage", 1, 1, 1)
-    };
+        {
+            new OffensiveSkill("Devastate", 1, 1, 1),
+            new DefensiveSkill("Shield Block", 1, 1, 1)
+        };
 
-        public ArcaneMage() : this(specialisationSkills)
+        public Protection() : this(specialisationSkills)
         {
 
         }
 
-        public ArcaneMage(ICollection<ICastable> specialisationSkills)
+        public Protection(ICollection<ICastable> specialisationSkills)
         {
             foreach (var specialisationSkll in specialisationSkills)
             {
