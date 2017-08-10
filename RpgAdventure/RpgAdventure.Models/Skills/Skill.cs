@@ -1,38 +1,48 @@
-﻿using RpgAdventure.Models.Interfaces;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using RpgAdventure.Models.Interfaces;
+using RpgAdventure.Utilities;
 
 namespace RpgAdventure.Models.Skills
 {
-    using System;
-    using Utilities;
-
     public abstract class Skill : ICastable
     {
-        private const string SkillNameCannotBeNullOrWhitespace = "Skill name can not be null or whitespace!";
-
         private string name;
-        protected int manaCost;
-        protected int levelRequired;
+        private int manaCost;
 
-        protected Skill(string name, int manaCost, int levelRequired)
+        public Skill(string name, int manaCost)
         {
             this.Name = name;
-            this.manaCost = manaCost;
-            this.levelRequired = levelRequired;
+            this.ManaCost = manaCost;
         }
 
         public string Name
         {
-            get => this.name;
-            private set
+            get { return this.name; }
+            set
             {
-                if (string.IsNullOrWhiteSpace(value))
+                if (string.IsNullOrEmpty(value))
                 {
-                    throw new ArgumentNullException(SkillNameCannotBeNullOrWhitespace);
+                    throw new ArgumentException(string.Format(Constants.ErrorMessages.StringValueCannotBeNullOrEmptyException,"Name"));
                 }
                 this.name = value;
             }
         }
 
-        public abstract void TryCast<T>(T target);
+        public int ManaCost
+        {
+            get { return this.manaCost; }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentException(string.Format(Constants.ErrorMessages.NumericValueCannotBeNegativeException,"Mana cost"));
+                }
+                this.manaCost = value;
+            }
+        }
     }
 }

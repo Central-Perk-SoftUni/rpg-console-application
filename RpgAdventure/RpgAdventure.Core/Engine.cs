@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using RpgAdventure.Core.Interfaces;
 using RpgAdventure.Models.Enums;
@@ -45,12 +46,14 @@ namespace RpgAdventure.Core
                 else if (pressedKey.Key == ConsoleKey.Enter)
                 {
                     MenuItem currentMenuOption = menu.MenuItems.ElementAt(menu.CurrentCursorPosition - 1);
-                    this.commandParser.ParseCommand(Enum.GetName(typeof(MenuItem),currentMenuOption));
+                    this.commandParser.ParseCommand(Enum.GetName(typeof(MenuItem), currentMenuOption));
                 }
                 Console.Clear();
                 this.menuService.ShowMenuItems(menu);
                 pressedKey = Console.ReadKey();
             }
         }
+
+
     }
 }

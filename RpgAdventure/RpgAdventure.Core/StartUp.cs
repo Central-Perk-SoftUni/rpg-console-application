@@ -1,4 +1,8 @@
-﻿using RpgAdventure.Core.Interfaces;
+﻿using System;
+using System.Linq;
+using System.Reflection;
+using RpgAdventure.Core.Interfaces;
+using RpgAdventure.Models;
 using RpgAdventure.Services;
 using RpgAdventure.Services.Interfaces;
 using RpgAdventure.Services.Interfaces.IO;
@@ -13,8 +17,9 @@ namespace RpgAdventure.Core
             IWriter writer = new ConsoleWriter();
             IMenuService menuService = new MenuService(writer);
             ICommandParser commandParser = new CommandParser(menuService);
-            IEngine engine = new Engine(commandParser,menuService);
+            IEngine engine = new Engine(commandParser, menuService);
             engine.Run();
+
         }
     }
 }

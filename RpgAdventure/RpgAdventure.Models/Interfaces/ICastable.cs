@@ -3,6 +3,6 @@
     public interface ICastable
     {
         string Name { get; }
-        void TryCast<T>(T target);
+        int ManaCost { get; set; }
     }
 }

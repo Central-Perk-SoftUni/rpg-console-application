@@ -46,6 +46,8 @@
     <Compile Include="Interfaces\IHealthInfo.cs" />
     <Compile Include="Interfaces\IMenu.cs" />
     <Compile Include="Interfaces\IPlayer.cs" />
+    <Compile Include="Interfaces\Spells\IDefensiveSkill.cs" />
+    <Compile Include="Interfaces\Spells\IOffensiveSKill.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="PlayableClasses\PlayableClass.cs" />
     <Compile Include="PlayableClasses\Classes\Warrior.cs" />

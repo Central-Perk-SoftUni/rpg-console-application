@@ -1,4 +1,5 @@
-﻿using RpgAdventure.Services.Interfaces;
+﻿using RpgAdventure.Models.Enums;
+using RpgAdventure.Services.Interfaces;
 using RpgAdventure.Services.Interfaces.IO;
 
 namespace RpgAdventure.Services
@@ -40,7 +41,7 @@ namespace RpgAdventure.Services
             }
         }
 
-        private string GetMenuItemDescription(object enumValue)
+        private string GetMenuItemDescription(MenuItem enumValue)
         {
             var fieldInfo = enumValue.GetType().GetField(enumValue.ToString());
 

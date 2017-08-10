@@ -8,8 +8,8 @@ namespace RpgAdventure.Models.PlayableClasses.Classes.MageSpecialisations
     {
         private static readonly ICollection<ICastable> specialisationSkills = new List<ICastable>()
         {
-            new OffensiveSkill("Pyroblast", 1, 1, 1),
-            new OffensiveSkill("Combustion", 1, 1, 1)
+            new OffensiveSkill("Pyroblast", 1, 1),
+            new OffensiveSkill("Combustion",  1, 1)
         };
 
 

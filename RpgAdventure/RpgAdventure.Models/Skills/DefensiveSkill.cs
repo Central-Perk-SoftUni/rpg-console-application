@@ -4,14 +4,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RpgAdventure.Models.Interfaces;
+using RpgAdventure.Models.Interfaces.Spells;
 
 namespace RpgAdventure.Models.Skills
 {
-    public class DefensiveSkill : Skill
+    public class DefensiveSkill : Skill,IDefensiveSkill
     {
         private int healingDealt;
 
-        public DefensiveSkill(string name, int manaCost, int levelRequired, int healingDealt) : base(name, manaCost, levelRequired)
+        public DefensiveSkill(string name, int manaCost, int healingDealt) : base(name,manaCost)
         {
             this.HealingDealt = healingDealt;
         }
@@ -29,14 +31,9 @@ namespace RpgAdventure.Models.Skills
             }
         }
 
-        public override void TryCast<T>(T target)
+        public void Cast(IPlayer target)
         {
-            //TODO Add Hero interface and model
-            //if (typeof(T) != typeof()
-            {
-
-            }
-
+            throw new NotImplementedException();
         }
     }
 }

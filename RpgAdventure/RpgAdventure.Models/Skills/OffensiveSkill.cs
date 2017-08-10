@@ -1,16 +1,15 @@
 ﻿using RpgAdventure.Models.Interfaces;
 using RpgAdventure.Utilities;
 using System;
+using RpgAdventure.Models.Interfaces.Spells;
 
 namespace RpgAdventure.Models.Skills
 {
-    public class OffensiveSkill : Skill
+    public class OffensiveSkill : Skill,IOffensiveSKill
     {
-        public const string CannotDamageFriendlyException = "Damaging abilities cannot be cast on friendly targets";
-
         private int damageDealt;
 
-        public OffensiveSkill(string name, int manaCost, int levelRequired, int damageDealt) : base(name, manaCost, levelRequired)
+        public OffensiveSkill(string name, int manaCost, int damageDealt) : base(name,manaCost)
         {
             this.DamageDealt = damageDealt;
         }
@@ -28,18 +27,10 @@ namespace RpgAdventure.Models.Skills
             }
         }
 
-        public override void TryCast<T>(T target)
-        {
-            if (typeof(T) != typeof(IEnemy))
-            {
-                throw new ArgumentException(CannotDamageFriendlyException);
-            }
-            this.Cast((IEnemy)target);
-        }
-
-        private void Cast(IEnemy target)
+        public void Cast(IEnemy target)
         {
             //TODO
         }
+        
     }
 }
