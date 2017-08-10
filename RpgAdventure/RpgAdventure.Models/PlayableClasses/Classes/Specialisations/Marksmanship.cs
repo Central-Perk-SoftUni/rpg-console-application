@@ -8,8 +8,8 @@
     {
         private static readonly ICollection<ICastable> specialisationSkills = new List<ICastable>()
         {
-            new OffensiveSkill("Arcane Shot", 1, 1, 1),
-            new OffensiveSkill("Aimed Shot", 1, 1, 1)
+            new OffensiveSkill("Arcane Shot", 1,  1),
+            new OffensiveSkill("Aimed Shot", 1,  1)
         };
 
         public Marksmanship() : this(specialisationSkills)

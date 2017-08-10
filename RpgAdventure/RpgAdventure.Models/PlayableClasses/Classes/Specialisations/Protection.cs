@@ -9,8 +9,8 @@
     {
         private static readonly ICollection<ICastable> specialisationSkills = new List<ICastable>()
         {
-            new OffensiveSkill("Devastate", 1, 1, 1),
-            new DefensiveSkill("Shield Block", 1, 1, 1)
+            new OffensiveSkill("Devastate", 1,  1),
+            new DefensiveSkill("Shield Block", 1,  1)
         };
 
         public Protection() : this(specialisationSkills)

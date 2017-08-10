@@ -8,8 +8,8 @@
     {
         private static readonly ICollection<ICastable> specialisationSkills = new List<ICastable>()
         {
-            new OffensiveSkill("Multi-Shot", 1, 1, 1),
-            new OffensiveSkill("Concussive Shot", 1, 1, 1)
+            new OffensiveSkill("Multi-Shot", 1, 1),
+            new OffensiveSkill("Concussive Shot",  1, 1)
         };
 
         public BeastMaster() : this(specialisationSkills)
