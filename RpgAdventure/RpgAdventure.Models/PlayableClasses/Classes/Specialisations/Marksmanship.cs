@@ -1,24 +1,23 @@
 ﻿namespace RpgAdventure.Models.PlayableClasses.Classes.Specialisations
 {
     using System.Collections.Generic;
-    using Classes;
     using Interfaces;
     using Skills;
 
-    public class FrostMage : Mage
+    public class Marksmanship : Classes.Hunter
     {
         private static readonly ICollection<ICastable> specialisationSkills = new List<ICastable>()
         {
-            new OffensiveSkill("Frostbolt", 1, 1, 1),
-            new OffensiveSkill("Frost Nova", 1, 1, 1)
+            new OffensiveSkill("Arcane Shot", 1, 1, 1),
+            new OffensiveSkill("Aimed Shot", 1, 1, 1)
         };
 
-        public FrostMage() : this(specialisationSkills)
+        public Marksmanship() : this(specialisationSkills)
         {
 
         }
 
-        public FrostMage(ICollection<ICastable> specialisationSkills)
+        public Marksmanship(ICollection<ICastable> specialisationSkills)
         {
             foreach (var specialisationSkll in specialisationSkills)
             {

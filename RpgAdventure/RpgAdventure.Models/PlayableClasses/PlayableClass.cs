@@ -1,6 +1,4 @@
-﻿using RpgAdventure.Models.Skills;
-
-namespace RpgAdventure.Models
+﻿namespace RpgAdventure.Models.PlayableClasses
 {
     using System.Collections.Generic;
     using Enums;

@@ -8,6 +8,8 @@ using RpgAdventure.Models.Interfaces;
 
 namespace RpgAdventure.Models.Races
 {
+    using PlayableClasses;
+
     public abstract class Race : IRace
     {
         private const string InvalidPlayableClassTypeException = "Invalid playable class type!";

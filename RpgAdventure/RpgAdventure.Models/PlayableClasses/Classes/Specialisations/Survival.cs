@@ -5,20 +5,20 @@
     using Interfaces;
     using Skills;
 
-    public class FrostMage : Mage
+    public class Survival : Hunter
     {
         private static readonly ICollection<ICastable> specialisationSkills = new List<ICastable>()
         {
-            new OffensiveSkill("Frostbolt", 1, 1, 1),
-            new OffensiveSkill("Frost Nova", 1, 1, 1)
+            new OffensiveSkill("Raptor Strike", 1, 1, 1),
+            new OffensiveSkill("Harpoon", 1, 1, 1)
         };
 
-        public FrostMage() : this(specialisationSkills)
+        public Survival() : this(specialisationSkills)
         {
 
         }
 
-        public FrostMage(ICollection<ICastable> specialisationSkills)
+        public Survival(ICollection<ICastable> specialisationSkills)
         {
             foreach (var specialisationSkll in specialisationSkills)
             {

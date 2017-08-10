@@ -23,7 +23,7 @@ namespace RpgAdventure.Models.PlayableClasses.Classes
             ArmorMaterial.Plate
         };
 
-        private static IStatsInfo baseStatsInfo = new StatsInfo(20, 16, 16, 18);
+        private static readonly IStatsInfo baseStatsInfo = new StatsInfo(20, 16, 16, 18);
 
         protected Warrior() : this(baseSkills, usableWeaponTypes, usableArmorMaterials, baseStatsInfo)
         {

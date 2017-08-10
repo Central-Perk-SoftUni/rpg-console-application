@@ -21,7 +21,7 @@ namespace RpgAdventure.Models.PlayableClasses.Classes
             ArmorMaterial.Cloth
         };
 
-        private static IStatsInfo baseStatsInfo = new StatsInfo(19, 19, 16, 15);
+        private static readonly IStatsInfo baseStatsInfo = new StatsInfo(19, 19, 16, 15);
 
         protected Mage() : this(baseSkills, usableWeaponTypes, usableArmorMaterials, baseStatsInfo)
         {
