@@ -30,6 +30,7 @@ namespace RpgAdventure.Core.Ninject
         {
             this.kernel.Bind<IEngine>().To<Engine>();
             this.kernel.Bind<ICommandParser>().To<CommandParser>();
+            this.kernel.Bind<IConsoleManipulator>().To<ConsoleManipulator>();
             this.kernel.Bind<IWriter>().To<ConsoleWriter>();
             this.kernel.Bind<IReader>().To<ConsoleReader>();
             this.kernel.Bind<IMenuService>().To<MenuService>();
