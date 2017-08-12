@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Linq;
 using System.Reflection;
+using Ninject;
 using RpgAdventure.Core.Interfaces;
+using RpgAdventure.Core.Ninject;
 using RpgAdventure.Models;
 using RpgAdventure.Services;
 using RpgAdventure.Services.Interfaces;
@@ -14,10 +16,10 @@ namespace RpgAdventure.Core
     {
         static void Main(string[] args)
         {
-            IWriter writer = new ConsoleWriter();
-            IMenuService menuService = new MenuService(writer);
-            ICommandParser commandParser = new CommandParser(menuService);
-            IEngine engine = new Engine(commandParser, menuService);
+            IKernel kernel = new StandardKernel();
+            ModulesRegistrator modulesRegistrator = new ModulesRegistrator(kernel);
+            modulesRegistrator.RegisterModules();
+            IEngine engine = kernel.Get<IEngine>();
             engine.Run();
 
         }
