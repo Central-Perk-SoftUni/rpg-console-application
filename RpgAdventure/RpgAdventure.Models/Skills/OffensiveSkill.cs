@@ -1,6 +1,6 @@
 ﻿using RpgAdventure.Models.Interfaces;
-using RpgAdventure.Utilities;
 using System;
+using RpgAdventure.Models.Exceptions;
 using RpgAdventure.Models.Interfaces.Spells;
 
 namespace RpgAdventure.Models.Skills
@@ -21,7 +21,7 @@ namespace RpgAdventure.Models.Skills
             {
                 if (value < 0)
                 {
-                    throw new ArgumentException(string.Join(Constants.ErrorMessages.NumericValueCannotBeNegativeException, "Damage dealt"));
+                    throw new NegativeNumberException("Damage dealt");
                 }
                 this.damageDealt = value;
             }

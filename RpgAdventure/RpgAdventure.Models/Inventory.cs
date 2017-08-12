@@ -1,12 +1,11 @@
 ﻿using RpgAdventure.Models.Interfaces;
-using RpgAdventure.Utilities;
 using System;
 using System.Collections.Generic;
 using RpgAdventure.Models.Interfaces.Items;
 
 namespace RpgAdventure.Models
 {
-    class Inventory : IInventory
+    public class Inventory : IInventory
     {
         public const string ItemCannotBeNull = "Item can not be null!";
 
@@ -25,7 +24,7 @@ namespace RpgAdventure.Models
         {
             if (item == null)
             {
-                throw new ArgumentException(ItemCannotBeNull);
+                throw new ArgumentNullException(ItemCannotBeNull);
             }
             if (this.items.Count == capacity)
             {
@@ -39,7 +38,7 @@ namespace RpgAdventure.Models
         {
             if (item == null)
             {
-                throw new ArgumentException(ItemCannotBeNull);
+                throw new ArgumentNullException(ItemCannotBeNull);
             }
             if (!this.items.Contains(item))
             {

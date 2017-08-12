@@ -11,27 +11,29 @@ namespace RpgAdventure.Services
 
     public class MenuService : IMenuService
     {
-        private IWriter writer;
+        private readonly IWriter writer;
+        private readonly IConsoleManipulator consoleManipulator;
 
-        public MenuService(IWriter writer)
+        public MenuService(IWriter writer, IConsoleManipulator consoleManipulator)
         {
             this.writer = writer;
+            this.consoleManipulator = consoleManipulator;
         }
 
         public void ShowMenuItems(IMenu menu)
         {
-            Console.CursorVisible = false;
+            consoleManipulator.AlterCursorVisibility(false);
             var counter = 1;
             
             foreach (var menuItem in menu.MenuItems)
             {
-                Console.SetCursorPosition(22, 8 + counter);
+                consoleManipulator.SetCursorAt(8 + counter,22);
                 if (menu.CurrentCursorPosition == counter)
                 {
-                    Console.BackgroundColor = ConsoleColor.DarkGray;
-                    Console.ForegroundColor = ConsoleColor.White;
+                    consoleManipulator.SetBackgroundColorTo(ConsoleColor.DarkGray);
+                    consoleManipulator.SetForegroundColorTo(ConsoleColor.White);
                     this.writer.WriteLine($"{this.GetMenuItemDescription(menuItem)}");
-                    Console.ResetColor();
+                    consoleManipulator.ResetColor();
                 }
                 else
                 {

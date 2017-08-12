@@ -61,7 +61,6 @@
     <Compile Include="Interfaces\ICommandParser.cs" />
     <Compile Include="Interfaces\IEngine.cs" />
     <Compile Include="Interfaces\IMenuNavigator.cs" />
-    <Compile Include="MenuNavigator.cs" />
     <Compile Include="Ninject\FactoryInstanceProviders\CommandFactoryInstanceBinder.cs" />
     <Compile Include="Ninject\FactoryInstanceProviders\PlayableClassFactoryInstanceProvider.cs" />
     <Compile Include="Ninject\ModulesRegistrator.cs" />

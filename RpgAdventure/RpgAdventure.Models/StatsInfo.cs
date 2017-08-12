@@ -1,6 +1,7 @@
 ﻿using System;
+using RpgAdventure.Models.Exceptions;
 using RpgAdventure.Models.Interfaces;
-using RpgAdventure.Utilities;
+
 
 namespace RpgAdventure.Models
 {
@@ -27,7 +28,7 @@ namespace RpgAdventure.Models
             {
                 if (value < 0)
                 {
-                    throw new ArgumentException(string.Format(Constants.ErrorMessages.NumericValueCannotBeNegativeException,"Stamina"));
+                    throw new NegativeNumberException("Stamina");
                 }
                 this.stamina = value;
             }
@@ -40,7 +41,7 @@ namespace RpgAdventure.Models
             {
                 if (value < 0)
                 {
-                    throw new ArgumentException(string.Format(Constants.ErrorMessages.NumericValueCannotBeNegativeException, "Intellect"));
+                    throw new NegativeNumberException("Intellect");
                 }
                 this.intellect = value;
             }
@@ -53,7 +54,7 @@ namespace RpgAdventure.Models
             {
                 if (value < 0)
                 {
-                    throw new ArgumentException(string.Format(Constants.ErrorMessages.NumericValueCannotBeNegativeException, "Agility"));
+                    throw new NegativeNumberException( "Agility");
                 }
                 this.agility = value;
             }
@@ -66,7 +67,7 @@ namespace RpgAdventure.Models
             {
                 if (value < 0)
                 {
-                    throw new ArgumentException(string.Format(Constants.ErrorMessages.NumericValueCannotBeNegativeException, "Strength"));
+                    throw new NegativeNumberException( "Strength");
                 }
                 this.strength = value;
             }

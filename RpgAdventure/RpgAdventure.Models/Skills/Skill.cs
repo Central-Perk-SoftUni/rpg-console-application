@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RpgAdventure.Models.Exceptions;
 using RpgAdventure.Models.Interfaces;
-using RpgAdventure.Utilities;
+
 
 namespace RpgAdventure.Models.Skills
 {
@@ -26,7 +27,7 @@ namespace RpgAdventure.Models.Skills
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    throw new ArgumentException(string.Format(Constants.ErrorMessages.StringValueCannotBeNullOrEmptyException,"Name"));
+                    throw new StringNullOrEmptyException("Name");
                 }
                 this.name = value;
             }
@@ -39,7 +40,7 @@ namespace RpgAdventure.Models.Skills
             {
                 if (value < 0)
                 {
-                    throw new ArgumentException(string.Format(Constants.ErrorMessages.NumericValueCannotBeNegativeException,"Mana cost"));
+                    throw new NegativeNumberException("Mana cost");
                 }
                 this.manaCost = value;
             }

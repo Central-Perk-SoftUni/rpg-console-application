@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RpgAdventure.Models.Exceptions;
 using RpgAdventure.Models.Interfaces;
-using RpgAdventure.Utilities;
 
 namespace RpgAdventure.Models
 {
@@ -32,7 +32,7 @@ namespace RpgAdventure.Models
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    throw new ArgumentException(Constants.ErrorMessages.StringValueCannotBeNullOrEmptyException);
+                    throw new StringNullOrEmptyException("Name");
                 }
                 this.name = value;
             }

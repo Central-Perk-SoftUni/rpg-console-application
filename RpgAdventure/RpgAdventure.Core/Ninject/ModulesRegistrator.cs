@@ -9,6 +9,8 @@ using RpgAdventure.Core.Commands;
 using RpgAdventure.Core.Interfaces;
 using RpgAdventure.Core.Interfaces.Factories;
 using RpgAdventure.Core.Ninject.FactoryInstanceProviders;
+using RpgAdventure.Models;
+using RpgAdventure.Models.Interfaces;
 using RpgAdventure.Models.Interfaces.Factories;
 using RpgAdventure.Services;
 using RpgAdventure.Services.Interfaces;
@@ -34,6 +36,7 @@ namespace RpgAdventure.Core.Ninject
             this.kernel.Bind<IWriter>().To<ConsoleWriter>();
             this.kernel.Bind<IReader>().To<ConsoleReader>();
             this.kernel.Bind<IMenuService>().To<MenuService>();
+            this.kernel.Bind<IMenu>().To<Menu>();
 
             this.kernel.Bind<ICommandFactory>().ToFactory(() => new CommandFactoryInstanceProvider(this.kernel));
             this.kernel.Bind<IPlayableClassFactory>()

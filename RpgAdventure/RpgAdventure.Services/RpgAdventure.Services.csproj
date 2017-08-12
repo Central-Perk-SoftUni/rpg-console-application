@@ -41,15 +41,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\IMenuService.cs" />
-    <Compile Include="Interfaces\IO\IConsoleInputReader.cs" />
-    <Compile Include="Interfaces\IO\IMenuNavigator.cs" />
     <Compile Include="Interfaces\IO\IConsoleManipulator.cs" />
     <Compile Include="Interfaces\IO\IReader.cs" />
     <Compile Include="Interfaces\IO\IWriter.cs" />
     <Compile Include="IO\ConsoleManipulator.cs" />
     <Compile Include="IO\ConsoleReader.cs" />
     <Compile Include="IO\ConsoleWriter.cs" />
-    <Compile Include="IO\MenuNavigator.cs" />
     <Compile Include="MenuService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

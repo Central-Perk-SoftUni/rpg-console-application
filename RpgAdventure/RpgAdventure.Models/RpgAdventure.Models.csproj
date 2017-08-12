@@ -41,6 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums\MenuItem.cs" />
+    <Compile Include="Exceptions\InvalidTypeOfArmorException.cs" />
+    <Compile Include="Exceptions\NegativeNumberException.cs" />
+    <Compile Include="Exceptions\StringNullOrEmptyException.cs" />
     <Compile Include="HealthInfo.cs" />
     <Compile Include="Interfaces\Factories\IPlayableClassFactory.cs" />
     <Compile Include="Interfaces\IHealthInfo.cs" />

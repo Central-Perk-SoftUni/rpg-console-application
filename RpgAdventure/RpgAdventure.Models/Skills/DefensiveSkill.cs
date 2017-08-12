@@ -1,9 +1,9 @@
-﻿using RpgAdventure.Utilities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RpgAdventure.Models.Exceptions;
 using RpgAdventure.Models.Interfaces;
 using RpgAdventure.Models.Interfaces.Spells;
 
@@ -25,7 +25,7 @@ namespace RpgAdventure.Models.Skills
             {
                 if (value < 0)
                 {
-                    throw new ArgumentException(string.Join(Constants.ErrorMessages.NumericValueCannotBeNegativeException, "Healing Dealt"));
+                    throw new NegativeNumberException("Healing Dealt");
                 }
                 this.healingDealt = value;
             }
@@ -33,7 +33,7 @@ namespace RpgAdventure.Models.Skills
 
         public void Cast(IPlayer target)
         {
-            throw new NotImplementedException();
+            //TODO
         }
     }
 }

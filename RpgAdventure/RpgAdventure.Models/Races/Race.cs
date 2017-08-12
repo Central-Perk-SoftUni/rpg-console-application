@@ -16,7 +16,7 @@ namespace RpgAdventure.Models.Races
 
         private ICollection<Type> playableClasses;
 
-        public Race(ICollection<ICastable> skills, ICollection<Type> playableClasses)
+        protected Race(ICollection<ICastable> skills, ICollection<Type> playableClasses)
         {
             this.Skills = skills;
             this.PlayableClasses = playableClasses;
@@ -36,7 +36,7 @@ namespace RpgAdventure.Models.Races
                 {
                     throw new ArgumentException(InvalidPlayableClassTypeException);
                 }
-                this.PlayableClasses = value;
+                this.playableClasses = value;
             }
         }
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using RpgAdventure.Models.Enums;
+using RpgAdventure.Models.Exceptions;
 using RpgAdventure.Models.Interfaces;
 using RpgAdventure.Models.Interfaces.Items;
 
@@ -7,8 +8,6 @@ namespace RpgAdventure.Models
 {
     public class Gear : IGear
     {
-        private const string InvalidArmorTypeError = "Armor of type {0} can not go in this slot!";
-
         private IArmor chest;
         private IArmor head;
         private IArmor legs;
@@ -30,7 +29,7 @@ namespace RpgAdventure.Models
             {
                 if (value.Type != ArmorType.Chest)
                 {
-                    throw new ArgumentException(string.Format(InvalidArmorTypeError,value.Type));
+                    throw new InvalidTypeOfArmorException(Enum.GetName(typeof(ArmorType),value));
                 }
                 this.chest = value;
             }
@@ -43,7 +42,7 @@ namespace RpgAdventure.Models
             {
                 if (value.Type != ArmorType.Head)
                 {
-                    throw new ArgumentException(string.Format(InvalidArmorTypeError, value.Type));
+                    throw new InvalidTypeOfArmorException(Enum.GetName(typeof(ArmorType), value));
                 }
                 this.head = value;
             }
@@ -56,7 +55,7 @@ namespace RpgAdventure.Models
             {
                 if (value.Type != ArmorType.Legs)
                 {
-                    throw new ArgumentException(string.Format(InvalidArmorTypeError, value.Type));
+                    throw new InvalidTypeOfArmorException(Enum.GetName(typeof(ArmorType), value));
                 }
                 this.legs = value;
             }
