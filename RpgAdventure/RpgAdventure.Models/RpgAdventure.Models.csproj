@@ -41,20 +41,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums\MenuItem.cs" />
-    <Compile Include="Factories\PlayableClassFactory.cs" />
     <Compile Include="HealthInfo.cs" />
+    <Compile Include="Interfaces\Factories\IPlayableClassFactory.cs" />
     <Compile Include="Interfaces\IHealthInfo.cs" />
     <Compile Include="Interfaces\IMenu.cs" />
     <Compile Include="Interfaces\IPlayer.cs" />
     <Compile Include="Interfaces\Spells\IDefensiveSkill.cs" />
     <Compile Include="Interfaces\Spells\IOffensiveSKill.cs" />
     <Compile Include="Menu.cs" />
-    <Compile Include="PlayableClasses\Classes\Specialisations\BeastMaster.cs" />
-    <Compile Include="PlayableClasses\Classes\Specialisations\Marksmanship.cs" />
-    <Compile Include="PlayableClasses\Classes\Specialisations\Survival.cs" />
-    <Compile Include="PlayableClasses\Classes\Specialisations\Arms.cs" />
-    <Compile Include="PlayableClasses\Classes\Specialisations\Fury.cs" />
-    <Compile Include="PlayableClasses\Classes\Specialisations\Protection.cs" />
+    <Compile Include="PlayableClasses\Classes\Specialisations\BeastMasterHunter.cs" />
+    <Compile Include="PlayableClasses\Classes\Specialisations\MarksmanshipHunter.cs" />
+    <Compile Include="PlayableClasses\Classes\Specialisations\SurvivalHunter.cs" />
+    <Compile Include="PlayableClasses\Classes\Specialisations\ArmsWarrior.cs" />
+    <Compile Include="PlayableClasses\Classes\Specialisations\FuryWarrior.cs" />
+    <Compile Include="PlayableClasses\Classes\Specialisations\ProtectionWarrior.cs" />
     <Compile Include="PlayableClasses\PlayableClass.cs" />
     <Compile Include="PlayableClasses\Classes\Warrior.cs" />
     <Compile Include="PlayableClasses\Classes\Hunter.cs" />

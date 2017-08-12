@@ -4,7 +4,7 @@
     using Interfaces;
     using Skills;
 
-    public class Arms : Classes.Warrior
+    public class ArmsWarrior : Warrior
     {
         private static readonly ICollection<ICastable> specialisationSkills = new List<ICastable>()
         {
@@ -12,12 +12,12 @@
             new OffensiveSkill("Colossus Smash", 1,  1)
         };
 
-        public Arms() : this(specialisationSkills)
+        public ArmsWarrior() : this(specialisationSkills)
         {
 
         }
 
-        public Arms(ICollection<ICastable> specialisationSkills)
+        public ArmsWarrior(ICollection<ICastable> specialisationSkills)
         {
             foreach (var specialisationSkll in specialisationSkills)
             {

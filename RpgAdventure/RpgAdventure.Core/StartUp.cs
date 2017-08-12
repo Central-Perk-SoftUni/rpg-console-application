@@ -12,10 +12,11 @@ using RpgAdventure.Services.IO;
 
 namespace RpgAdventure.Core
 {
-    class StartUp
+    public class StartUp
     {
-        static void Main(string[] args)
+        public static void Main()
         {
+
             IKernel kernel = new StandardKernel();
             ModulesRegistrator modulesRegistrator = new ModulesRegistrator(kernel);
             modulesRegistrator.RegisterModules();

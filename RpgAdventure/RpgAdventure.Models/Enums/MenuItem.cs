@@ -5,7 +5,7 @@
     public enum MenuItem
     {
         [Description("New Game")]NewGame,
-        [Description("Credits")]Credits,
+        [Description("Credits")]ShowCredits,
         [Description("Exit Game")]Exit
     }
 }

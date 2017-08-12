@@ -4,7 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Ninject;
+using Ninject.Extensions.Factory;
+using RpgAdventure.Core.Commands;
 using RpgAdventure.Core.Interfaces;
+using RpgAdventure.Core.Interfaces.Factories;
+using RpgAdventure.Core.Ninject.FactoryInstanceProviders;
+using RpgAdventure.Models.Interfaces.Factories;
 using RpgAdventure.Services;
 using RpgAdventure.Services.Interfaces;
 using RpgAdventure.Services.Interfaces.IO;
@@ -23,11 +28,15 @@ namespace RpgAdventure.Core.Ninject
 
         public void RegisterModules()
         {
-            kernel.Bind<IEngine>().To<Engine>();
-            kernel.Bind<ICommandParser>().To<CommandParser>();
-            kernel.Bind<IWriter>().To<ConsoleWriter>();
-            kernel.Bind<IReader>().To<ConsoleReader>();
-            kernel.Bind<IMenuService>().To<MenuService>();
+            this.kernel.Bind<IEngine>().To<Engine>();
+            this.kernel.Bind<ICommandParser>().To<CommandParser>();
+            this.kernel.Bind<IWriter>().To<ConsoleWriter>();
+            this.kernel.Bind<IReader>().To<ConsoleReader>();
+            this.kernel.Bind<IMenuService>().To<MenuService>();
+
+            this.kernel.Bind<ICommandFactory>().ToFactory(() => new CommandFactoryInstanceProvider(this.kernel));
+            this.kernel.Bind<IPlayableClassFactory>()
+                .ToFactory(() => new PlayableClassFactoryInstanceProvider(this.kernel));
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using RpgAdventure.Core.Interfaces;
 using RpgAdventure.Models.Enums;
+using RpgAdventure.Models.Interfaces.Factories;
 using RpgAdventure.Services.Interfaces;
 
 namespace RpgAdventure.Core

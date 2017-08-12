@@ -8,10 +8,18 @@
 
     public class Menu : IMenu
     {
-        public Menu()
+        private const int StartPosition = 1;
+        private static readonly ICollection<MenuItem> InitialMenuItems = new List<MenuItem>(Enum.GetValues(typeof(MenuItem)).Cast<MenuItem>());
+
+        public Menu() : this(StartPosition, InitialMenuItems)
         {
-            this.CurrentCursorPosition = 1;
-            this.MenuItems = new HashSet<MenuItem>(Enum.GetValues(typeof(MenuItem)).Cast<MenuItem>());
+            
+        }
+
+        public Menu(int currentCursorPosition, ICollection<MenuItem> menuItems)
+        {
+            this.CurrentCursorPosition = currentCursorPosition;
+            this.MenuItems = menuItems;
         }
 
         public int CurrentCursorPosition { get; set; }

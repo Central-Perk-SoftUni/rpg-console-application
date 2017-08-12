@@ -41,8 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\IMenuService.cs" />
+    <Compile Include="Interfaces\IO\IInputInfo.cs" />
     <Compile Include="Interfaces\IO\IReader.cs" />
     <Compile Include="Interfaces\IO\IWriter.cs" />
+    <Compile Include="IO\ConsoleKeyInfo.cs" />
     <Compile Include="IO\ConsoleReader.cs" />
     <Compile Include="IO\ConsoleWriter.cs" />
     <Compile Include="MenuService.cs" />
