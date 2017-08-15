@@ -1,8 +1,8 @@
 ﻿namespace RpgAdventure.Models.PlayableClasses.Classes.Specialisations
 {
-    using System.Collections.Generic;
     using Interfaces;
     using Skills;
+    using System.Collections.Generic;
 
     public class ArmsWarrior : Warrior
     {
@@ -14,7 +14,6 @@
 
         public ArmsWarrior() : this(specialisationSkills)
         {
-
         }
 
         public ArmsWarrior(ICollection<ICastable> specialisationSkills)

@@ -3,13 +3,13 @@ using RpgAdventure.Models.Interfaces;
 
 namespace RpgAdventure.Models
 {
-    class Enemy : IEnemy
+    internal class Enemy : IEnemy
     {
         private string name;
         private int attackDamage;
         private int level;
 
-        public Enemy(string name, IHealthInfo healthInfo,int attackDamage, int level)
+        public Enemy(string name, IHealthInfo healthInfo, int attackDamage, int level)
         {
             this.Name = name;
             this.HealthInfo = healthInfo;

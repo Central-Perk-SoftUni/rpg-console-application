@@ -1,9 +1,9 @@
 ﻿namespace RpgAdventure.Models.PlayableClasses.Classes.Specialisations
 {
-    using System.Collections.Generic;
     using Classes;
     using Interfaces;
     using Skills;
+    using System.Collections.Generic;
 
     public class SurvivalHunter : Hunter
     {
@@ -15,7 +15,6 @@
 
         public SurvivalHunter() : this(specialisationSkills)
         {
-
         }
 
         public SurvivalHunter(ICollection<ICastable> specialisationSkills)

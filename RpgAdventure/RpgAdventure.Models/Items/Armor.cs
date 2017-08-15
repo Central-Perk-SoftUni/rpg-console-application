@@ -18,6 +18,5 @@ namespace RpgAdventure.Models.Items
         public ItemRarity Rarity { get; set; }
         public ArmorMaterial Material { get; set; }
         public ArmorType Type { get; set; }
-
     }
 }

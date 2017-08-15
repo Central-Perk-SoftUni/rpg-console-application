@@ -3,7 +3,7 @@ using RpgAdventure.Models.Interfaces;
 
 namespace RpgAdventure.Models
 {
-    class LevelInfo : ILevelInfo
+    internal class LevelInfo : ILevelInfo
     {
         private const int DefaultStartingLevel = 1;
         private const int DefaultStartingExperience = 0;
@@ -18,7 +18,6 @@ namespace RpgAdventure.Models
 
         public LevelInfo() : this(DefaultStartingLevel, DefaultStartingExperience, DefaultStartingExperienceToNextLevel)
         {
-
         }
 
         private LevelInfo(int currentLevel, int currentExperience, int totalExperienceRequiredToNextLevel)

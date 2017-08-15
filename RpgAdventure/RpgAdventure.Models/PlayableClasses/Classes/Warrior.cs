@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-using RpgAdventure.Models.Enums;
+﻿using RpgAdventure.Models.Enums;
 using RpgAdventure.Models.Interfaces;
+using System.Collections.Generic;
 
 namespace RpgAdventure.Models.PlayableClasses.Classes
 {
@@ -8,7 +8,6 @@ namespace RpgAdventure.Models.PlayableClasses.Classes
     {
         private static readonly ICollection<ICastable> baseSkills = new List<ICastable>()
         {
-
         };
 
         private static readonly ICollection<WeaponType> usableWeaponTypes = new List<WeaponType>()
@@ -27,13 +26,11 @@ namespace RpgAdventure.Models.PlayableClasses.Classes
 
         protected Warrior() : this(baseSkills, usableWeaponTypes, usableArmorMaterials, baseStatsInfo)
         {
-
         }
 
         protected Warrior(ICollection<ICastable> skills, ICollection<WeaponType> weaponTypes, ICollection<ArmorMaterial> armorMaterials,
             IStatsInfo baseStats) : base(skills, weaponTypes, armorMaterials, baseStats)
         {
-
         }
     }
 }

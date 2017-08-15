@@ -2,11 +2,11 @@
 
 namespace RpgAdventure.Models
 {
+    using RpgAdventure.Models.Enums;
+    using RpgAdventure.Models.Interfaces;
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using RpgAdventure.Models.Enums;
-    using RpgAdventure.Models.Interfaces;
 
     public class Menu : IMenu
     {
@@ -16,7 +16,6 @@ namespace RpgAdventure.Models
 
         public Menu() : this(StartPosition, InitialMenuItems)
         {
-            
         }
 
         public Menu(int currentCursorPosition, ICollection<MenuItem> menuItems)

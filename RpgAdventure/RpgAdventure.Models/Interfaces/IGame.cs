@@ -4,12 +4,8 @@
 
     public interface IGame
     {
-        void CreatePlayer(IPlayer player);
+        IPlayer Player { get; set; }
 
-        void SpawnEnemy(IEnemy enemy);
-
-        void Battle(IPlayer player, IEnemy enemy);
-
-        void EndGame();
+        int Score { get; set; }
     }
 }

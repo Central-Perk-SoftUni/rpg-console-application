@@ -51,6 +51,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameCore\GamePlatform.cs" />
+    <Compile Include="Interfaces\GameCore\IGamePlatform.cs" />
     <Compile Include="Interfaces\IMenuNavigator.cs" />
     <Compile Include="MenuCommandParser.cs" />
     <Compile Include="Commands\ExitCommand.cs" />

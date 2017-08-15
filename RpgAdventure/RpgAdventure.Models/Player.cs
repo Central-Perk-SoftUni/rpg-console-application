@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RpgAdventure.Models.Exceptions;
+﻿using RpgAdventure.Models.Exceptions;
 using RpgAdventure.Models.Interfaces;
 
 namespace RpgAdventure.Models
@@ -22,6 +17,7 @@ namespace RpgAdventure.Models
             this.EquippedItems = equippedItems;
             this.LevelInfo = levelInfo;
         }
+
         public IPlayableClass Class { get; set; }
         public IRace Race { get; set; }
 

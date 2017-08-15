@@ -1,15 +1,14 @@
-﻿using RpgAdventure.Models.Interfaces;
-using System;
-using RpgAdventure.Models.Exceptions;
+﻿using RpgAdventure.Models.Exceptions;
+using RpgAdventure.Models.Interfaces;
 using RpgAdventure.Models.Interfaces.Spells;
 
 namespace RpgAdventure.Models.Skills
 {
-    public class OffensiveSkill : Skill,IOffensiveSKill
+    public class OffensiveSkill : Skill, IOffensiveSKill
     {
         private int damageDealt;
 
-        public OffensiveSkill(string name, int manaCost, int damageDealt) : base(name,manaCost)
+        public OffensiveSkill(string name, int manaCost, int damageDealt) : base(name, manaCost)
         {
             this.DamageDealt = damageDealt;
         }
@@ -31,6 +30,5 @@ namespace RpgAdventure.Models.Skills
         {
             //TODO
         }
-        
     }
 }

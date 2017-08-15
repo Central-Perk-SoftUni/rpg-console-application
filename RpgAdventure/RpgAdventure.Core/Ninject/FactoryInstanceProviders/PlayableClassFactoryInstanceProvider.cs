@@ -1,17 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using Ninject;
 using Ninject.Extensions.Factory;
 using Ninject.Extensions.Factory.Factory;
-using RpgAdventure.Models.Interfaces;
 
 namespace RpgAdventure.Core.Ninject.FactoryInstanceProviders
 {
-
     public class PlayableClassFactoryInstanceProvider : IInstanceProvider
     {
         private const string PlayableClassesNamespace = "RpgAdventure.Models.PlayableClasses.Classes.Specialisations";

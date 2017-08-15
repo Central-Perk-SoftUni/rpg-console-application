@@ -1,5 +1,5 @@
-﻿using System;
-using RpgAdventure.Services.Interfaces.IO;
+﻿using RpgAdventure.Services.Interfaces.IO;
+using System;
 
 namespace RpgAdventure.Services.IO
 {
@@ -12,7 +12,7 @@ namespace RpgAdventure.Services.IO
 
         public void SetCursorAt(int row, int col)
         {
-            Console.SetCursorPosition(col,row);
+            Console.SetCursorPosition(col, row);
         }
 
         public void SetForegroundColorTo(ConsoleColor color)

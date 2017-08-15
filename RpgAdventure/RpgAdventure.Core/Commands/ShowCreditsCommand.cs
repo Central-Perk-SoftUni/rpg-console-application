@@ -1,27 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RpgAdventure.Services.Interfaces;
+﻿using RpgAdventure.Services.Interfaces;
+using RpgAdventure.Services.Interfaces.OutputServices;
 
 namespace RpgAdventure.Core.Commands
 {
     using RpgAdventure.Core.Interfaces;
-    using RpgAdventure.Services;
 
     public class ShowCreditsCommand : ICommand
     {
-        private readonly IMenuService menuService;
+        private readonly IMenuOutputService menuOutputService;
 
-        public ShowCreditsCommand(IMenuService menuService)
+        public ShowCreditsCommand(IMenuOutputService menuOutputService)
         {
-            this.menuService = menuService;
+            this.menuOutputService = menuOutputService;
         }
 
         public void Execute()
         {
-            this.menuService.ShowCredits();
+            this.menuOutputService.ShowCredits();
         }
     }
 }

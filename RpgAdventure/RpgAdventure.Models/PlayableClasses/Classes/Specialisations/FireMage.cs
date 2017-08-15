@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-using RpgAdventure.Models.Interfaces;
+﻿using RpgAdventure.Models.Interfaces;
 using RpgAdventure.Models.Skills;
+using System.Collections.Generic;
 
 namespace RpgAdventure.Models.PlayableClasses.Classes.MageSpecialisations
 {
@@ -12,13 +12,11 @@ namespace RpgAdventure.Models.PlayableClasses.Classes.MageSpecialisations
             new OffensiveSkill("Combustion",  1, 1)
         };
 
-
         public FireMage() : this(specialisationSkills)
         {
-
         }
 
-        public FireMage(ICollection<ICastable> specialisationSkills) :base()
+        public FireMage(ICollection<ICastable> specialisationSkills) : base()
         {
             foreach (var specialisationSkll in specialisationSkills)
             {

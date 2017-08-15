@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using RpgAdventure.Core.Interfaces.GameCore;
 
 namespace RpgAdventure.Core.Commands
 {
@@ -11,16 +7,16 @@ namespace RpgAdventure.Core.Commands
 
     public class NewGameCommand : ICommand
     {
-        private readonly IGameService gameService;
+        private readonly IGamePlatform gamePlatform;
 
-        public NewGameCommand(IGameService gameService)
+        public NewGameCommand(IGamePlatform gamePlatform)
         {
-            this.gameService = gameService;
+            this.gamePlatform = gamePlatform;
         }
 
         public void Execute()
         {
-            this.gameService.StartGame();
+            this.gamePlatform.CreateNewGame();
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿namespace RpgAdventure.Models.Interfaces
 {
-    using System.Collections.Generic;
     using Enums;
+    using System.Collections.Generic;
 
     public interface IPlayableClass
     {

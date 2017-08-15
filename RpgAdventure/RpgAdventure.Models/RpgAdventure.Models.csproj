@@ -44,8 +44,10 @@
     <Compile Include="Exceptions\InvalidTypeOfArmorException.cs" />
     <Compile Include="Exceptions\NegativeNumberException.cs" />
     <Compile Include="Exceptions\StringNullOrEmptyException.cs" />
+    <Compile Include="Game.cs" />
     <Compile Include="HealthInfo.cs" />
     <Compile Include="Interfaces\Factories\IPlayableClassFactory.cs" />
+    <Compile Include="Interfaces\IGame.cs" />
     <Compile Include="Interfaces\IHealthInfo.cs" />
     <Compile Include="Interfaces\IMenu.cs" />
     <Compile Include="Interfaces\IPlayer.cs" />

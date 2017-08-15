@@ -1,12 +1,8 @@
-﻿using System;
-using RpgAdventure.Core.Interfaces.Factories;
-using RpgAdventure.Services.Interfaces;
+﻿using RpgAdventure.Core.Interfaces.Factories;
 
 namespace RpgAdventure.Core
 {
-    using RpgAdventure.Core.Commands;
     using RpgAdventure.Core.Interfaces;
-    using RpgAdventure.Services;
 
     public class MenuCommandParser : IMenuCommandParser
     {

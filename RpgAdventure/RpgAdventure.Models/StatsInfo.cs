@@ -1,13 +1,10 @@
-﻿using System;
-using RpgAdventure.Models.Exceptions;
+﻿using RpgAdventure.Models.Exceptions;
 using RpgAdventure.Models.Interfaces;
-
 
 namespace RpgAdventure.Models
 {
     public class StatsInfo : IStatsInfo
     {
-       
         private int stamina;
         private int intellect;
         private int agility;
@@ -54,7 +51,7 @@ namespace RpgAdventure.Models
             {
                 if (value < 0)
                 {
-                    throw new NegativeNumberException( "Agility");
+                    throw new NegativeNumberException("Agility");
                 }
                 this.agility = value;
             }
@@ -67,7 +64,7 @@ namespace RpgAdventure.Models
             {
                 if (value < 0)
                 {
-                    throw new NegativeNumberException( "Strength");
+                    throw new NegativeNumberException("Strength");
                 }
                 this.strength = value;
             }

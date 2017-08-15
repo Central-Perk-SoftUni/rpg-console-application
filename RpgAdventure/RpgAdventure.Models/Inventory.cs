@@ -1,7 +1,7 @@
 ﻿using RpgAdventure.Models.Interfaces;
+using RpgAdventure.Models.Interfaces.Items;
 using System;
 using System.Collections.Generic;
-using RpgAdventure.Models.Interfaces.Items;
 
 namespace RpgAdventure.Models
 {
@@ -19,7 +19,7 @@ namespace RpgAdventure.Models
         }
 
         public ICollection<IItem> Items => this.items;
-        
+
         public bool Add(IItem item)
         {
             if (item == null)

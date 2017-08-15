@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-using RpgAdventure.Models.Interfaces;
+﻿using RpgAdventure.Models.Interfaces;
 using RpgAdventure.Models.Skills;
+using System.Collections.Generic;
 
 namespace RpgAdventure.Models.PlayableClasses.Classes.Specialisations
 {
@@ -14,10 +14,9 @@ namespace RpgAdventure.Models.PlayableClasses.Classes.Specialisations
 
         public ArcaneMage() : this(specialisationSkills)
         {
-            
         }
 
-        public ArcaneMage(ICollection<ICastable> specialisationSkills) :base()
+        public ArcaneMage(ICollection<ICastable> specialisationSkills) : base()
         {
             foreach (var specialisationSkll in specialisationSkills)
             {

@@ -1,8 +1,8 @@
-﻿using System;
-using RpgAdventure.Models.Enums;
+﻿using RpgAdventure.Models.Enums;
 using RpgAdventure.Models.Exceptions;
 using RpgAdventure.Models.Interfaces;
 using RpgAdventure.Models.Interfaces.Items;
+using System;
 
 namespace RpgAdventure.Models
 {
@@ -29,7 +29,7 @@ namespace RpgAdventure.Models
             {
                 if (value.Type != ArmorType.Chest)
                 {
-                    throw new InvalidTypeOfArmorException(Enum.GetName(typeof(ArmorType),value));
+                    throw new InvalidTypeOfArmorException(Enum.GetName(typeof(ArmorType), value));
                 }
                 this.chest = value;
             }

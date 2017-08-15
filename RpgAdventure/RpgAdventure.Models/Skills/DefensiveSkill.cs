@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RpgAdventure.Models.Exceptions;
+﻿using RpgAdventure.Models.Exceptions;
 using RpgAdventure.Models.Interfaces;
 using RpgAdventure.Models.Interfaces.Spells;
 
 namespace RpgAdventure.Models.Skills
 {
-    public class DefensiveSkill : Skill,IDefensiveSkill
+    public class DefensiveSkill : Skill, IDefensiveSkill
     {
         private int healingDealt;
 
-        public DefensiveSkill(string name, int manaCost, int healingDealt) : base(name,manaCost)
+        public DefensiveSkill(string name, int manaCost, int healingDealt) : base(name, manaCost)
         {
             this.HealingDealt = healingDealt;
         }

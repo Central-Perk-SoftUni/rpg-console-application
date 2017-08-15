@@ -1,33 +1,39 @@
-﻿using RpgAdventure.Models.Enums;
-using RpgAdventure.Services.Interfaces;
+﻿using System;
+using System.ComponentModel;
+using RpgAdventure.Models.Enums;
+using RpgAdventure.Models.Interfaces;
 using RpgAdventure.Services.Interfaces.IO;
+using RpgAdventure.Services.Interfaces.OutputServices;
+using RpgAdventure.Utilities;
 
-namespace RpgAdventure.Services
+namespace RpgAdventure.Services.OutputServices
 {
-    using System;
-    using System.ComponentModel;
-    using RpgAdventure.Models.Interfaces;
-    using RpgAdventure.Services.IO;
-
-    public class MenuService : IMenuService
+    public class MenuOutputService : IMenuOutputService
     {
         private readonly IWriter writer;
         private readonly IConsoleManipulator consoleManipulator;
 
-        public MenuService(IWriter writer, IConsoleManipulator consoleManipulator)
+        public MenuOutputService(IWriter writer, IConsoleManipulator consoleManipulator)
         {
             this.writer = writer;
             this.consoleManipulator = consoleManipulator;
         }
 
+
         public void ShowMenuItems(IMenu menu)
+        {
+            this.ShowMenuItems(menu, new PrintCoordinates(Constants.OutputRow,Constants.OutputCol));
+        }
+
+
+        public void ShowMenuItems(IMenu menu, PrintCoordinates coordinates)
         {
             consoleManipulator.AlterCursorVisibility(false);
             var counter = 1;
-            
+
             foreach (var menuItem in menu.MenuItems)
             {
-                consoleManipulator.SetCursorAt(8 + counter,22);
+                consoleManipulator.SetCursorAt(coordinates.OutputRow + counter, coordinates.OutputCol);
                 if (menu.CurrentCursorPosition == counter)
                 {
                     consoleManipulator.SetBackgroundColorTo(ConsoleColor.DarkGray);

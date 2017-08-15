@@ -1,9 +1,9 @@
 ﻿namespace RpgAdventure.Models.PlayableClasses.Classes.Specialisations
 {
-    using System.Collections.Generic;
     using Classes;
     using Interfaces;
     using Skills;
+    using System.Collections.Generic;
 
     public class FrostMage : Mage
     {
@@ -15,7 +15,6 @@
 
         public FrostMage() : this(specialisationSkills)
         {
-
         }
 
         public FrostMage(ICollection<ICastable> specialisationSkills)

@@ -1,10 +1,8 @@
-﻿using System;
+﻿using RpgAdventure.Models.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using RpgAdventure.Models.Interfaces;
 
 namespace RpgAdventure.Models.Races
 {
@@ -21,7 +19,6 @@ namespace RpgAdventure.Models.Races
             this.Skills = skills;
             this.PlayableClasses = playableClasses;
         }
-
 
         public ICollection<ICastable> Skills { get; set; }
 

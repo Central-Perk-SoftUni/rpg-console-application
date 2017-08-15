@@ -1,8 +1,8 @@
 ﻿namespace RpgAdventure.Models.PlayableClasses.Classes.Specialisations
 {
-    using System.Collections.Generic;
     using Interfaces;
     using Skills;
+    using System.Collections.Generic;
 
     public class BeastMasterHunter : Classes.Hunter
     {
@@ -14,7 +14,6 @@
 
         public BeastMasterHunter() : this(specialisationSkills)
         {
-
         }
 
         public BeastMasterHunter(ICollection<ICastable> specialisationSkills)

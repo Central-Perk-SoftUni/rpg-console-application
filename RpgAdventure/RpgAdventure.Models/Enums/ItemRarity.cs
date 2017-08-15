@@ -6,6 +6,5 @@
         Rare,
         Epic,
         Legendary
-            
     }
 }
