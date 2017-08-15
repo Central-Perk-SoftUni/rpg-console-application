@@ -12,13 +12,13 @@ using RpgAdventure.Core.Interfaces;
 
 namespace RpgAdventure.Core.Ninject
 {
-    public class CommandFactoryInstanceProvider : IInstanceProvider
+    public class MenuCommandFactoryInstanceProvider : IInstanceProvider
     {
         private const string CommandsNamespace = "RpgAdventure.Core.Commands";
 
         private readonly IKernel kernel;
 
-        public CommandFactoryInstanceProvider(IKernel kernel)
+        public MenuCommandFactoryInstanceProvider(IKernel kernel)
         {
             this.kernel = kernel;
         }
