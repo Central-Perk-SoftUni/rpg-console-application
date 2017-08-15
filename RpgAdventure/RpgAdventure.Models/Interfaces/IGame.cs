@@ -4,14 +4,12 @@
 
     public interface IGame
     {
-        IPlayer Player { get; }
+        void CreatePlayer(IPlayer player);
 
-        IEnemy Enemy { get; }
-
-        void CreatePlayer();
-
-        void SpawnEnemy();
+        void SpawnEnemy(IEnemy enemy);
 
         void Battle(IPlayer player, IEnemy enemy);
+
+        void EndGame();
     }
 }
