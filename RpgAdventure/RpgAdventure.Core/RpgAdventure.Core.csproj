@@ -51,16 +51,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommandParser.cs" />
+    <Compile Include="Interfaces\IMenuNavigator.cs" />
+    <Compile Include="MenuCommandParser.cs" />
     <Compile Include="Commands\ExitCommand.cs" />
     <Compile Include="Commands\NewGameCommand.cs" />
     <Compile Include="Commands\ShowCreditsCommand.cs" />
     <Compile Include="Engine.cs" />
-    <Compile Include="Interfaces\Factories\ICommandFactory.cs" />
+    <Compile Include="Interfaces\Factories\IMenuCommandFactory.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
-    <Compile Include="Interfaces\ICommandParser.cs" />
+    <Compile Include="Interfaces\IMenuCommandParser.cs" />
     <Compile Include="Interfaces\IEngine.cs" />
-    <Compile Include="Interfaces\IMenuNavigator.cs" />
+    <Compile Include="MenuNavigator.cs" />
     <Compile Include="Ninject\FactoryInstanceProviders\CommandFactoryInstanceBinder.cs" />
     <Compile Include="Ninject\FactoryInstanceProviders\PlayableClassFactoryInstanceProvider.cs" />
     <Compile Include="Ninject\ModulesRegistrator.cs" />

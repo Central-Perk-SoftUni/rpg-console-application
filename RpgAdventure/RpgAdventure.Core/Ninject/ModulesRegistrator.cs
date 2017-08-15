@@ -31,14 +31,15 @@ namespace RpgAdventure.Core.Ninject
         public void RegisterModules()
         {
             this.kernel.Bind<IEngine>().To<Engine>();
-            this.kernel.Bind<ICommandParser>().To<CommandParser>();
+            this.kernel.Bind<IMenuCommandParser>().To<MenuCommandParser>();
             this.kernel.Bind<IConsoleManipulator>().To<ConsoleManipulator>();
             this.kernel.Bind<IWriter>().To<ConsoleWriter>();
             this.kernel.Bind<IReader>().To<ConsoleReader>();
             this.kernel.Bind<IMenuService>().To<MenuService>();
             this.kernel.Bind<IMenu>().To<Menu>();
+            this.kernel.Bind<IMenuNavigator>().To<MenuNavigator>();
 
-            this.kernel.Bind<ICommandFactory>().ToFactory(() => new CommandFactoryInstanceProvider(this.kernel));
+            this.kernel.Bind<IMenuCommandFactory>().ToFactory(() => new MenuCommandFactoryInstanceProvider(this.kernel));
             this.kernel.Bind<IPlayableClassFactory>()
                 .ToFactory(() => new PlayableClassFactoryInstanceProvider(this.kernel));
         }
