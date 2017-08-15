@@ -1,28 +1,18 @@
 ﻿namespace RpgAdventure.Core
 {
     using System;
-    using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
     using System.Text;
     using RpgAdventure.Core.Interfaces;
-    using RpgAdventure.Core.Ninject.FactoryInstanceProviders;
     using RpgAdventure.Models.Interfaces;
     using RpgAdventure.Models.Interfaces.Factories;
     using RpgAdventure.Models.PlayableClasses.Classes.MageSpecialisations;
     using RpgAdventure.Models.PlayableClasses.Classes.Specialisations;
     using RpgAdventure.Models.Races;
     using RpgAdventure.Models.Skills;
-    using RpgAdventure.Services.Interfaces.IO;
-    using RpgAdventure.Services.IO;
 
     public class Game : IGame
     {
-        private IPlayer player;
-        private IEnemy enemy;
-        private IReader consoleReader;
-        private IWriter consoleWriter;
-        private IConsoleManipulator consoleManipulator;
         private IPlayableClassFactory playableClassFactory;
         private static readonly ICollection<IPlayableClass> elfClasses = new List<IPlayableClass>()
         {
@@ -52,18 +42,11 @@
             new DefensiveSkill("def1", 20, 20)
         };
 
-        public Game(IWriter writer, IReader reader, IConsoleManipulator manipulator)
-        { 
-            this.consoleManipulator = manipulator;
-            this.consoleWriter = writer;
-            this.consoleReader = reader;
+        public Game()
+        {
         }
 
-        public IPlayer Player => this.player;
-
-        public IEnemy Enemy => this.enemy;
-
-        public void CreatePlayer()
+        public void CreatePlayer(IPlayer player)
         {
             IRace race = null;
             IPlayableClass playableClass = null;
@@ -74,18 +57,35 @@
             sb.AppendLine("1. Elf");
             sb.AppendLine("2. Human");
             sb.AppendLine("3. Orc");
-            ChooseRace(sb, race);
-            
+            //this.consoleWriter.WriteLine(sb.ToString());
+            race = this.ChooseRace(sb, race);
+            sb.Clear();
+            //this.consoleManipulator.ClearScreen();
+
+            sb.AppendLine("Choose a class: ");
+            int i = 1;
+            sb.Append("1. ");
+            sb.AppendLine(string.Join($"{Environment.NewLine}{++i}. ", race.PlayableClasses));
+            //this.consoleWriter.WriteLine(sb.ToString());
+            playableClass = this.ChooseClass(playableClass, race);
 
         }
 
-        private void ChooseRace(StringBuilder sb, IRace race)
+        private IPlayableClass ChooseClass(IPlayableClass playableClass, IRace race)
         {
-            int choice = int.Parse(this.consoleReader.Read());
+            //int choice = int.Parse(this.consoleReader.Read());
+            //playableClass = race.PlayableClasses[choice];
+
+            return playableClass;
+        }
+
+        private IRace ChooseRace(StringBuilder sb, IRace race)
+        {
+            //int choice = int.Parse(this.consoleReader.Read());
             switch (choice)
             {
                 case 1:
-                    List<IPlayableClass> availableClasses = new List<IPlayableClass>(){};
+                    List<IPlayableClass> availableClasses = new List<IPlayableClass>() { };
                     race = new Elf(elfSkills, elfClasses);
                     break;
                 case 2:
@@ -95,20 +95,28 @@
                     race = new Orc(orcSkills, orcClasses);
                     break;
                 default:
-                    this.consoleWriter.WriteLine("Invalid choice! Please choose again.");
-                    ChooseRace(sb, race);
+                    //this.consoleWriter.WriteLine("Invalid choice! Please choose again.");
+                    this.ChooseRace(sb, race);
                     break;
             }
+
+            return race;
         }
 
-        public void SpawnEnemy()
+        public void SpawnEnemy(IEnemy enemy)
         {
-            
+            throw new NotImplementedException();
         }
 
         public void Battle(IPlayer player, IEnemy enemy)
         {
-            
+            throw new NotImplementedException();
         }
+
+        public void EndGame()
+        {
+            throw new NotImplementedException();
+        }
+        
     }
 }
